@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+    --color1 : #1A4051;
+    --color2: #014769;
+    --color3: #FCB64C;
+    --color4: #FFFFFF;
+    --color5: #E5E5E5;
+    --color6: #000000;
+    
+}
+
+body,
+h1,
+input,
+textarea,
+button {
+  font-family: "Roboto", sans-serif;
+  font: 400 1rem;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+h2 {
+  font-family: "Concert One", sans-serif;
+  font: 700 1rem;
+  font-style: normal;
+}
