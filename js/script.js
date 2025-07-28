@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadSection('header-placeholder', 'section/header.html');
     loadSection('hero-placeholder', 'sections/hero.html');
     loadSection('popular-placeholder', 'sections/popular.html');
-    loadSection('about-us-placeholder', 'sections/about-us.html');
+    loadSection('about-placeholder', 'sections/about-us.html');
     loadSection('benefits-placeholder', 'sections/benefits.html');
     loadSection('study-careers-placeholder', 'sections/study-careers.html');
     loadSection('team-placeholder', 'sections/team.html');
@@ -38,13 +38,13 @@ async function loadPopular() {
     await loadSection('popular-placeholder', 'sections/popular.html');
 }
 async function loadAbout() {
-    await loadSection('about-us-placeholder', 'sections/about-us.htmll');
+    await loadSection('about-us-placeholder', 'sections/aboutUs.htmll');
 }
 async function loadBenefits() {
     await loadSection('benefits-placeholder', 'sections/benefits.html');
 }
 async function loadStudy() {
-    await loadSection('study-careers-placeholder', 'sections/study-careers.html');
+    await loadSection('study-careers-placeholder', 'sections/studyCareers.html');
 }
 async function loadTeam() {
     await loadSection('team-placeholder', 'sections/team.html');
