@@ -1,0 +1,82 @@
+.footer-link {
+  color: #fff; 
+  text-decoration: none;
+  transition: color 0.3s ease-in-out; 
+}
+
+.footer-link:hover {
+  color: var(--color3); 
+  text-decoration: none;
+}
+
+.contact-info .social-links .social-icon {
+  color: #fff;
+  font-size: 1.5rem; 
+  margin-right: 15px; 
+  transition: color 0.3s ease-in-out;
+}
+
+.contact-info .social-links .social-icon:hover {
+  color: var(--color3); 
+}
+
+.footer-jos-silvera-logo {
+  max-width: 150px;
+  height: auto;
+  margin-top: 15px; 
+}
+
+
+.input-group .btn-warning {
+  background-color: var(--color3);
+  border-color: var(--color3);
+  color: var(--color5); 
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.input-group .btn-warning:hover {
+  background-color: var(--color3); 
+  border-color: var(--color3);
+}
+
+.footer-logo-universidad{
+    height: 7rem; 
+    margin-top: 3rem;
+    margin: 0 auto 1rem auto; 
+}
+.footer-logo-small {
+  width: 7rem;
+}
+
+.input-group .form-control.rounded-pill-left {
+    border-top-left-radius: 50rem;
+    border-bottom-left-radius: 50rem;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.input-group .btn.rounded-pill-right {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 50rem;
+    border-bottom-right-radius: 50rem;
+}
+
+.list-align-left{
+    margin-left: -4rem;
+}
+
+.text-footer{
+    font-family: "Concert One", sans-serif;
+    color: var(--color3) !important;
+}
+
+
+@media (max-width: 767.98px) {
+  .footer-logo,
+  .quick-links,
+  .contact-info,
+  .newsletter-section {
+    text-align: center;
+  }
+}
