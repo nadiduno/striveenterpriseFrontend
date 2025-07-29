@@ -28,8 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Inicializar Bootstrap después de cargar las secciones
-async function loadHeader() {
-    await loadSection('header-placeholder', 'sections/header.html');
+async function loadHeader() {await loadSection('header-placeholder', 'sections/header.html');
 }
 async function loadHero() {
     await loadSection('hero-placeholder', 'sections/hero.html');
@@ -38,7 +37,7 @@ async function loadPopular() {
     await loadSection('popular-placeholder', 'sections/popular.html');
 }
 async function loadAbout() {
-    await loadSection('about-us-placeholder', 'sections/aboutUs.htmll');
+    await loadSection('about-placeholder', 'sections/about.html');
 }
 async function loadBenefits() {
     await loadSection('benefits-placeholder', 'sections/benefits.html');
