@@ -132,7 +132,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     } else {
         console.warn('No se encontró el carrusel con la clase .reviews-carousel. Asegúrate de que reviews.html se cargue correctamente.');
     }
-    
 });
 
 
