@@ -1,9 +1,0 @@
-.separator{
-    display: flex;
-    justify-content: space-between;
-}
-
-.separator2{
-    display: flex;
-    gap: 2rem;
-}
