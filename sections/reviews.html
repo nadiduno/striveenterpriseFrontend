@@ -1,1 +1,142 @@
-<div class="container">Reviews</div>
+<div class="container py-5">
+  <div class="mb-5 text-center text-lg-left">
+    <p class="section-subtitle">
+      <span class="dot bg-warning rounded-circle d-inline-block mr-2"></span
+      >Reviews
+    </p>
+    <h2 class="section-title font-weight-bold">
+      For us it is very important to <br class="d-none d-lg-block" />
+      know the opinions of our clients
+    </h2>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <!-- Carrusel -->
+      <div id="videoCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="video-thumbnail position-relative">
+                  <img
+                    src="http://img.youtube.com/vi/g__W-AkCJ3k/maxresdefault.jpg"
+                    onerror="this.src='http://img.youtube.com/vi/g__W-AkCJ3k/0.jpg'"
+                    alt=""
+                    class="img-fluid w-100 rounded"
+                  />
+                  <button
+                    class="btn btn-video-play"
+                    data-toggle="modal"
+                    data-target="#videoModal"
+                    data-video="video/review-1.mp4"
+                    data-type="local"
+                  >
+                    <i class="fas fa-play"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="video-thumbnail position-relative">
+                  <img
+                    src="http://img.youtube.com/vi/g__W-AkCJ3k/maxresdefault.jpg"
+                    onerror="this.src='http://img.youtube.com/vi/g__W-AkCJ3k/0.jpg'"
+                    alt=""
+                    class="img-fluid w-100 rounded"
+                  />
+                  <button
+                    class="btn btn-video-play"
+                    data-toggle="modal"
+                    data-target="#videoModal"
+                    data-video="g__W-AkCJ3k"
+                    data-type="youtube"
+                  >
+                    <i class="fas fa-play"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a
+          class="carousel-control-prev"
+          href="#videoCarousel"
+          role="button"
+          data-slide="prev"
+        >
+          <span
+            class="carousel-control-prev-icon bg-dark rounded-circle p-3"
+            aria-hidden="true"
+          ></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#videoCarousel"
+          role="button"
+          data-slide="next"
+        >
+          <span
+            class="carousel-control-next-icon bg-dark rounded-circle p-3"
+            aria-hidden="true"
+          ></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="videoModal"
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content border-0">
+      <div class="modal-header border-0">
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+          onclick="stopVideo()"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body p-0">
+        <div class="embed-responsive embed-responsive-16by9">
+          <video
+            id="localVideo"
+            class="embed-responsive-item"
+            controls
+            style="display: none"
+          >
+            <source src="" type="video/mp4" />
+            Your browser does not support HTML5 video.
+          </video>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/g__W-AkCJ3k?si=E90NpoT_VX0Ob7C3"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

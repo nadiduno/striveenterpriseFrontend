@@ -1,0 +1,146 @@
+.video-thumbnail {
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  background-color: #000;
+  aspect-ratio: 16/9;
+}
+
+.video-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  opacity: 0.9;
+}
+
+.video-thumbnail:hover img {
+  transform: scale(1.03);
+  opacity: 1;
+}
+
+.btn-video-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgba(255, 0, 0, 0.8);
+  border: none;
+  color: white;
+  font-size: 28px;
+  transition: all 0.3s ease;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-video-play:hover {
+  background-color: rgba(255, 0, 0, 1);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.btn-video-play i {
+  margin-left: 5px; /* Ajuste para centralizar o ícone */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.modal-xl {
+  max-width: 95%;
+}
+
+.modal-content {
+  background: transparent;
+  box-shadow: none;
+}
+
+.close {
+  font-size: 2.5rem;
+  opacity: 0.8;
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  z-index: 100;
+}
+
+.close:hover {
+  opacity: 1;
+}
+.video-thumbnail {
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #000;
+  aspect-ratio: 16/9;
+  position: relative;
+}
+
+.video-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.btn-video-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgba(255, 0, 0, 0.8);
+  border: none;
+  color: white;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-lg {
+  max-width: 70%;
+  padding: -2rem;
+}
+
+.close {
+  font-size: 2rem;
+  opacity: 0.8;
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  z-index: 100;
+}
+@media (max-width: 992px) {
+  .modal-xl {
+    max-width: 100%;
+    margin: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #reviews h2 {
+    font-size: 2rem;
+  }
+
+  .btn-video-play {
+    width: 60px;
+    height: 60px;
+    font-size: 22px;
+  }
+
+  .close {
+    font-size: 2rem;
+    right: 5px;
+  }
+}
