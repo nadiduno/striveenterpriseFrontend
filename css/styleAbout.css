@@ -155,4 +155,7 @@
   .icon-item {
     margin-bottom: 2rem; 
 }
+.section-subtitle2::after {
+  width: 6rem;
+}
 }
