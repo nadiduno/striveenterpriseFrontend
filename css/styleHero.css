@@ -2,16 +2,6 @@
     height: 4rem; /* Ajusta el tamaño del logo si es necesario */
   margin-right: 1.5rem; 
 }
-.buttonBasic{
-    background-color: var(--color3);
-    color:var(--color4);
-    width: 10rem;
-    border-radius: 20px;
-}
-
-.buttonBasic:hover{
-  border-color: var(--color4);
-}
 
 .backgroundHero{
     background-image: url('../img/IMAGENHERO.jpg');
