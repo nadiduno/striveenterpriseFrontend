@@ -1,16 +1,20 @@
-.logo-universidad{
-    height: 4rem; /* Ajusta el tamaño del logo si es necesario */
-  margin-right: 1.5rem; 
+.logo-universidad {
+  height: 4rem; /* Ajusta el tamaño del logo si es necesario */
+  margin-right: 1.5rem;
 }
 
-.backgroundHero{
-    background-image: url('../img/IMAGENHERO.jpg');
+.backgroundHero {
+  background-image: url("../img/IMAGENHERO.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
   color: var(--color4);
-  overflow: hidden; 
+  overflow: hidden;
   z-index: 0;
+}
+.position-texto {
+  position: relative;
+  z-index: 2;
 }
 
 .backgroundHero::before {
@@ -21,23 +25,27 @@
   width: 100%;
   height: 100%;
   background-color: var(--hero-overlay-color);
-   z-index: -1;
+  z-index: -1;
 }
 
-.link-Hero{
+.link-Hero {
   gap: 2rem;
   padding-left: 2rem;
-
 }
-li{
+
+
+li {
   padding-left: 4rem;
 }
 
-a{
+a {
   color: var(--color4);
-
 }
 
-.textoMain{
+a:hover{
+  color: var(--color3);
+}
+
+.textoMain {
   font-size: 1.5rem;
 }
