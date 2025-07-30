@@ -32,7 +32,7 @@
 }
 
 .section-title2 {
-  color: var(--color4);
+  color: var(--color4) !important;
 }
 
 .about-us-text {
@@ -59,39 +59,38 @@
 }
 
 .about-us-image-container {
-    position: relative; 
-    border-radius: 15px;
-    display: inline-block;
-    margin-left: auto; 
-    margin-right: auto;
-    display: block;
-    border: var(--color3) 2px;
+  position: relative;
+  border-radius: 15px;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border: var(--color3) 2px;
 }
 
 .about-us-image {
-    border-radius: 10px;
-    display: block; 
-    position: relative;
-    z-index: 2;
+  border-radius: 10px;
+  display: block;
+  position: relative;
+  z-index: 2;
 }
 
 .about-us-image-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 18px; 
-    z-index: 1; 
-    transform: rotate(5deg); 
-    transform-origin: left; 
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-   border-radius: 1rem;
-    border: 5px solid var(--color3);
-    opacity: 0.5;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 18px;
+  z-index: 1;
+  transform: rotate(5deg);
+  transform-origin: left;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  border: 5px solid var(--color3);
+  opacity: 0.5;
 }
-
 
 .icon-item {
   padding: 1rem;
@@ -123,17 +122,17 @@
   margin-top: 0.5rem;
 }
 
-.border-Card{
-    transform: rotateX('30');
+.border-Card {
+  transform: rotateX("30");
 }
-.section-title3,span{
+.section-title3,
+span {
   color: var(--color4);
 }
 
 @media (max-width: 991.98px) {
-
   .about-us-image-container {
-    margin-bottom: 2rem; 
+    margin-bottom: 2rem;
   }
 }
 
@@ -150,12 +149,12 @@
   .btn-about-us {
     display: block;
     margin-left: auto;
-    margin-right: auto; 
+    margin-right: auto;
   }
   .icon-item {
-    margin-bottom: 2rem; 
-}
-.section-subtitle2::after {
-  width: 6rem;
-}
+    margin-bottom: 2rem;
+  }
+  .section-subtitle2::after {
+    width: 6rem;
+  }
 }
