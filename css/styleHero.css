@@ -1,43 +1,85 @@
-.logo-universidad{
-    height: 4rem; /* Ajusta el tamaño del logo si es necesario */
-  margin-right: 1.5rem; 
+/* Estilos para a seção Hero */
+.hero-section {
+    position: relative; /* Para que o conteúdo posicionado absolutamente funcione */
+    height: 100vh; /* Ocupa a altura total da viewport */
+    overflow: hidden; /* Garante que o vídeo não "vaze" */
+    display: flex; /* Para centralizar o conteúdo verticalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    background-color: #003366; /* Cor de fallback se o vídeo não carregar */
 }
 
-.backgroundHero{
-    background-image: url('../img/IMAGENHERO.jpg');
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  color: var(--color4);
-  overflow: hidden; 
-  z-index: 0;
+/* Estilos para o container do vídeo de fundo */
+.video-background {
+    position: absolute;
+    /* top: 0; */
+    /* left: 0; */
+    width: 100%;
+    height: 70%;
+    margin-top: -1rem;
+    overflow: hidden;
+    z-index: 0; /* Coloca o vídeo atrás do conteúdo */
 }
 
-.backgroundHero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--hero-overlay-color);
-   z-index: -1;
+.video-background video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o vídeo */
+    object-fit: cover; /* Garante que o vídeo cubra toda a área sem distorção */
 }
 
-.link-Hero{
-  gap: 2rem;
-  padding-left: 2rem;
-
-}
-li{
-  padding-left: 4rem;
-}
-
-a{
-  color: var(--color4);
-
+/* Estilos para a sobreposição escura sobre o vídeo (opcional, mas recomendado para legibilidade) */
+.video-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Fundo escuro com 40% de opacidade */
+    z-index: 1; /* Acima do vídeo, abaixo do conteúdo */
 }
 
-.textoMain{
-  font-size: 1.5rem;
+/* Estilos para o conteúdo da seção Hero (texto, formulário) */
+.hero-content {
+    position: relative; /* Acima do vídeo e da sobreposição */
+    z-index: 2; /* Garante que o conteúdo fique por cima */
+    color: #fff; /* Cor do texto */
+    padding-top: 50px; /* Ajuste se houver um navbar fixo no topo */
+    padding-bottom: 50px;
+}
+
+/* Responsividade para o título em telas menores */
+@media (max-width: 991.98px) { /* Medium devices (tablets, 768px and up) */
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 767.98px) { /* Small devices (landscape phones, 576px and up) */
+    .hero-section {
+        height: auto; /* Permite que a altura se ajuste ao conteúdo em mobile */
+        min-height: 80vh; /* Garante uma altura mínima */
+        padding-top: 80px; /* Espaçamento para navbars fixos */
+        padding-bottom: 50px;
+    }
+    .hero-content .row {
+        flex-direction: column; /* Empilha o texto e o formulário */
+        align-items: center;
+    }
+    .hero-content .col-lg-6 {
+        text-align: center;
+    }
+    .registration-form {
+        width: 100%; /* Ocupa a largura total em mobile */
+        margin-top: 30px; /* Espaçamento entre texto e formulário */
+    }
+    .hero-logo {
+        max-width: 150px; /* Logo menor em mobile */
+    }
 }

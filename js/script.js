@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Cargar todas las secciones.
     await loadSection('header-placeholder', 'sections/header.html');
     await loadSection('hero-placeholder', 'sections/hero.html');
+    await loadSection('formRegister-placeholder', 'sections/formRegister.html');
     await loadSection('popular-placeholder', 'sections/popular.html');
     await loadSection('about-placeholder', 'sections/about.html'); 
     await loadSection('benefits-placeholder', 'sections/benefits.html'); // Certifique-se de que esta seção existe se estiver usando-a
@@ -137,6 +138,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 async function loadHeader() {await loadSection('header-placeholder', 'sections/header.html');}
 async function loadHero() {await loadSection('hero-placeholder', 'sections/hero.html');}
+async function loadFormRegister() {await loadSection('formRegister-placeholder', 'sections/formRegister.html');}
 async function loadPopular() {await loadSection('popular-placeholder', 'sections/popular.html');}
 async function loadAbout() {await loadSection('about-placeholder', 'sections/about.html');}
 async function loadBenefits() {await loadSection('benefits-placeholder', 'sections/benefits.html');}
@@ -148,6 +150,7 @@ async function loadFooter() {await loadSection('footer-placeholder', 'sections/f
 document.addEventListener('DOMContentLoaded', () => {
     loadHeader();
     loadHero();
+    loadFormRegister()
     loadPopular();
     loadAbout();
     loadBenefits();
