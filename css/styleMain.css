@@ -70,7 +70,6 @@ h1 {
 }
 
 .buttonBasic:hover {
-  background-color: darken(var(--color3), 10%);
   text-decoration: none;
   color: var(--color6);
   border-color: var(--color5);
