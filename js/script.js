@@ -1,5 +1,3 @@
-// script.js
-
 // Cargar sección
 async function loadSection(placeholderId, filePath) {
     try {
@@ -22,10 +20,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     await loadSection('formRegister-placeholder', 'sections/formRegister.html');
     await loadSection('popular-placeholder', 'sections/popular.html');
     await loadSection('about-placeholder', 'sections/about.html'); 
-    await loadSection('benefits-placeholder', 'sections/benefits.html'); // Certifique-se de que esta seção existe se estiver usando-a
-    await loadSection('study-careers-placeholder', 'sections/study-careers.html');
+    await loadSection('benefits-placeholder', 'sections/benefits.html'); 
+    await loadSection('studyCareers-placeholder', 'sections/studyCareers.html');
     await loadSection('team-placeholder', 'sections/team.html'); 
-    await loadSection('reviews-placeholder', 'sections/reviews.html'); // Carrega a seção de reviews
+    await loadSection('reviews-placeholder', 'sections/reviews.html'); 
     await loadSection('footer-placeholder', 'sections/footer.html');
 
     // Inicializar Owl Carousel para 'team-carousel' DESPUÉS de que la sección 'team' se haya cargado.
@@ -142,7 +140,7 @@ async function loadFormRegister() {await loadSection('formRegister-placeholder',
 async function loadPopular() {await loadSection('popular-placeholder', 'sections/popular.html');}
 async function loadAbout() {await loadSection('about-placeholder', 'sections/about.html');}
 async function loadBenefits() {await loadSection('benefits-placeholder', 'sections/benefits.html');}
-async function loadStudy() {await loadSection('study-careers-placeholder', 'sections/studyCareers.html');}
+async function loadStudy() {await loadSection('studyCareers-placeholder', 'sections/studyCareers.html');}
 async function loadTeam() {await loadSection('team-placeholder', 'sections/team.html');}
 async function loadReviews() {await loadSection('reviews-placeholder', 'sections/reviews.html');}
 async function loadFooter() {await loadSection('footer-placeholder', 'sections/footer.html');}

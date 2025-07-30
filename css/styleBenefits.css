@@ -1,0 +1,158 @@
+/* Seu CSS existente para o rodapé */
+
+/* Variáveis (se você ainda não as tem) */
+:root {
+    --primary-blue: #003366;
+    --secondary-orange: #ffc107;
+    --light-gray: #f8f9fa; /* Para o background de algumas seções */
+    --text-dark: #343a40;
+    --text-light: #6c757d;
+    --white-color: #FFFFFF; /* Variável para branco */
+}
+
+/* Estilos para a seção Beneficios */
+.beneficios-section {
+    position: relative; /* Para posicionar a imagem de fundo */
+    overflow: hidden; /* Garante que a imagem não "vaze" */
+    padding: 80px 0; /* Espaçamento interno */
+    color: var(--white-color); /* Cor padrão do texto na seção */
+    background-color: var(--primary-blue); /* Fallback caso a imagem não carregue */
+}
+
+/* Imagem de Fundo */
+.background-image-beneficios {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/BACKGROUNDBENEFITS.jpg'); /* */
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.4); /* Escurece a imagem para legibilidade do texto */
+    z-index: 0; /* Fica no fundo */
+}
+
+/* Garante que o conteúdo esteja acima da imagem de fundo */
+.beneficios-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Estilos para os títulos da seção */
+.beneficios-section .section-subtitle {
+    font-size: 1.1rem;
+    color: var(--secondary-orange);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.beneficios-section .section-subtitle .dot {
+    width: 10px;
+    height: 10px;
+    background-color: var(--secondary-orange);
+    border-radius: 50%;
+    margin-right: 8px;
+    display: inline-block;
+}
+
+.beneficios-section .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--white-color); /* Título branco */
+    margin-bottom: 1rem;
+}
+
+/* Estilos para os cards de benefício */
+.benefit-card {
+    background-color: transparent; /* Transparente para mostrar o background */
+    border-radius: 15px; /* Bordas arredondadas */
+    padding: 2rem 1.5rem;
+    color: var(--white-color); /* Cor do texto dentro do card */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza conteúdo para desktop e mobile */
+    min-height: 280px; /* Garante uma altura mínima para todos os cards */
+}
+
+.benefit-icon-wrapper {
+    width: 100px; /* Tamanho do círculo */
+    height: 100px;
+    background-color: var(--white-color); /* Fundo branco para o círculo */
+    border-radius: 50%; /* Faz o círculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.benefit-icon {
+    max-width: 60%; /* Tamanho do ícone dentro do círculo */
+    height: auto;
+}
+
+.benefit-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+    color: var(--white-color); /* Título do benefício branco */
+}
+
+.benefit-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.8); /* Descrição um pouco mais clara */
+}
+
+/* Estilos para os botões "Read More" nos cards de benefício */
+.benefit-btn {
+    background-color: var(--secondary-orange); /* Cor amarela */
+    color: var(--primary-blue);
+    border: none;
+    border-radius: 50rem; /* Botão em pílula */
+    padding: 0.6rem 1.8rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.benefit-btn:hover {
+    background-color: #e0a800; /* Tom mais escuro no hover */
+    transform: translateY(-2px); /* Efeito sutil de levantar */
+    color: var(--primary-blue);
+}
+
+
+/* Responsividade para a seção Beneficios */
+@media (max-width: 991.98px) { /* Tablets e Mobile */
+    .beneficios-section .section-title,
+    .beneficios-section .section-subtitle {
+        text-align: center; /* Centraliza o título e subtítulo */
+        justify-content: center; /* Centraliza o ponto do subtítulo */
+    }
+    .benefit-card {
+        padding: 1.5rem 1rem;
+        min-height: 250px; /* Garante altura uniforme em mobile */
+    }
+    .benefit-title {
+        font-size: 1.3rem;
+    }
+    .benefit-description {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 767.98px) { /* Apenas Mobile (para a regra de 2 por linha) */
+    .beneficios-section {
+        padding: 60px 0;
+    }
+    /* `col-md-6` já lida com 2 por linha em telas md e menores */
+    /* Garante espaçamento entre cards na mesma linha em mobile */
+    .col-md-6.mb-4 {
+        margin-bottom: 1.5rem; /* Adiciona espaçamento entre as linhas */
+    }
+}
