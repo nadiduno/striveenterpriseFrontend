@@ -1,0 +1,191 @@
+:root {
+    --card-gap: 1.5rem; 
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--color3);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle .dot {
+    width: 10px;
+    height: 10px;
+    background-color: var(--color3);
+    border-radius: 50%;
+    margin-right: 8px;
+    display: inline-block;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--color1);
+    margin-bottom: 1rem;
+}
+
+/* Estilos para os Career Cards */
+.career-card {
+    position: relative;
+    overflow: hidden; /* Para o efeito zoom da imagem */
+    border-radius: 15px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: flex-end; 
+    background-color: var(--color1);
+}
+
+@media (min-width: 992px) {
+    
+    .career-card:not(.small-card) { 
+        height: 24rem;
+    }
+
+    /* Altura para os cards da direita (Mathematics, Programming, Biology) */
+    .career-card.small-card {
+        /*
+        Temos 2 linhas de cards de 300px na esquerda, totalizando 600px.
+        Cada linha tem um margin-bottom de 1.5rem (aprox 24px). Então, 300px + 1.5rem + 300px = ~624px.
+        Na direita, temos 3 cards, então 624px / 3 = ~208px.
+        Ajuste o valor para o melhor visual, incluindo as margens entre os próprios cards pequenos.
+        Se os mb-4 dos col-12 adicionarem 1.5rem de margin-bottom, então são 2 gaps.
+        (600px - 2 * 1.5rem) / 3 = (600 - 48) / 3 = 552 / 3 = 184px
+        Vamos começar com 180px e ajustar visualmente.
+        */
+        height: 11.25rem; 
+    }
+    .col-md-6.mb-4,
+    .col-12.mb-4 {
+        margin-bottom: var(--card-gap);
+    }
+}
+
+.career-card {
+    position: relative;
+    overflow: hidden; /* Para que o zoom não "vaze" do card */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: flex-end;
+    background-color: var(--color1);
+}
+
+.career-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s ease; 
+    z-index: 0; 
+    filter: brightness(0.7); 
+}
+
+.career-card:hover .career-card-img {
+    transform: scale(1.08); /* Efeito zoom no hover */
+}
+
+.career-card-content {
+    position: relative;
+    z-index: 1;
+    padding: 1.5rem;
+    color: var(--color4);
+    width: 100%; 
+    text-align: left;
+}
+
+.career-card-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+    color: #fff;
+}
+
+
+.career-card-btn {
+    background-color: var(--color3); 
+    color: var(--color1);
+    border: none;
+    border-radius: 50rem; 
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.career-card-btn:hover {
+    background-color: var(--color3); 
+    transform: translateY(-2px); 
+    color: var(--color1);
+}
+
+.view-more-btn {
+    border-color: var(--color3);
+    color: var(--color3);
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.view-more-btn:hover {
+    background-color: var(--color3);
+    color: var(--color1);
+}
+
+/* Responsividade: Mobile First */
+@media (max-width: 767.98px) { 
+    .section-title {
+        font-size: 2rem;
+        text-align: center; 
+    }
+    .section-subtitle {
+        justify-content: center; 
+    }
+
+    .career-card {
+        height: 250px; 
+        margin-bottom: 1rem; 
+    }
+
+    .career-card-content {
+        text-align: center;
+        padding: 1rem;
+    }
+    .career-card-btn {
+        padding: 0.4rem 1.2rem;
+        font-size: 0.8rem;
+    }
+
+    .col-lg-8, .col-lg-4 {
+        margin-bottom: 1rem;
+    }
+
+    .col-md-6, .col-12 {
+        margin-bottom: 0 !important; 
+    }
+    .col-md-6:not(:last-child),
+    .col-12:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+    .col-lg-8 > .row > .col-12:last-child .career-card { 
+         margin-bottom: 0; 
+    }
+
+}
+
+/* Ajustes para telas médias (tablets) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .section-title {
+        font-size: 2.2rem;
+    }
+    .career-card {
+        height: 280px; 
+    }
+    .col-md-6.mb-4,
+    .col-12.mb-4 {
+        margin-bottom: var(--card-gap);
+    }
+}
